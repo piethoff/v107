@@ -1,9 +1,49 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
-\begin{figure}
+\subsection{Bestimmung der Viskosität von destilliertem Wasser bei konstanter Temperatur}
+Die Viskosität von destilliertem Wasser bei konstanter Temperatur lässt sich über die Gleichung\eqref{eq:dicht} berechnen.
+Die Dichte der Kugel erhält man aus den gemessenen Werten für die Masse und den Durchmesser, welche in Tabelle aufgetragen sind.
+\begin{table}[H]
+  \caption{Ergebnisse der Messung.}
+  \label{tab:kl_maße}
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{cSSS}
+    \toprule
+    \midrule
+    {$m/\si{\gram}$} & 4.45 & 4.44 & 4.46 \\
+    {$D/\si{\milli\meter}$} & 15.59 & 15.60 & 15.59 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\noindent Im Mittel erhält man dann für den Durchmesser und die Masse:
+\begin{equation*}
+  \bar{m}=\SI{4.45\pm 0.01}{\gram}
+\end{equation*}
+\begin{equation*}
+  \bar{D}=\SI{15.59\pm 0.14 }{\milli\meter}
+\end{equation*}
+\noindent Die Ungenauigkeit errechnet sich hier über Streung des Mittelwertes:
+ \begin{equation}
+   \Delta \bar{x} =\sqrt{\frac{1}{N(N-1)}\sum_{i=1}^N(x_i-\bar{x})^2}
+ \end{equation}
+\begin{table}[H]
+    \centering
+    \caption{Fallzeiten der kleinen Kugel.}
+    \label{tab:kl_fall}
+    \begin{tabular}{S[table-format=2.2] S[table-format=2.2] }
+        \toprule
+        {$1.Messung/\si{\second}$} & {$2.Messung/\si{\second}$} \\
+        \midrule
+        12.22   & 12.29 \\
+        12.22   & 12.07 \\
+        12.16   & 12.18 \\
+        12.19   & 12.07 \\
+        12.22   & 12.13 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\subsection{Bestimmung der Apparaturkonstante für die große Kugel}
+\subsection{Berechnung der Reynoldschen Zahl}
