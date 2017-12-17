@@ -141,4 +141,65 @@ Die gemessenen Werte für die Fallzeit befinden sich in Tabelle\ref{tab:fall_g}
  \begin{equation*}
    \Delta K = \sqrt{(\Delta t \frac{- \upeta}{(\rho_K - \rho_\text{Fl})t^2})^2 +(\Delta \upeta \frac{1}{(\rho_K - \rho_\text{Fl})t})^2 + (\Delta \rho_K \frac{-\upeta}{({\rho_K}^2 - \rho_\text{Fl})}t)^2}
  \end{equation*}
+%
+\subsection{Temperaturabhängigkeit der Viskosität}
+Es wurden folgende Messwerte aufgenommen:
+\begin{table}[H]
+    \centering
+    \caption{Messwerte zur Bestimmung der Temperaturabhängigen Viskosität.}
+    \begin{tabular}{S[table-format=2.0] S[table-format=2.2]}
+    \toprule
+    {Temperatur$/\si{\celsius}$} & {Fallzeit$/\si{\second}$} \\
+    \midrule
+    32 &    53.41 \\
+    32 &    52.92 \\
+    34 &    51.31 \\
+    34 &    51.04 \\
+    38 &    47.72 \\
+    38 &    45.95 \\
+    45 &    42.62 \\
+    45 &    42.84 \\
+    48 &    40.31 \\
+    48 &    40.23 \\
+    52 &    38.22 \\
+    52 &    37.91 \\
+    55 &    36.50 \\
+    55 &    37.18 \\
+    60 &    34.28 \\
+    60 &    33.87 \\
+    64 &    32.62 \\
+    64 &    31.30 \\
+    70 &    30.38 \\
+    70 &    30.20 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+\noindent Diese werden nun nach Gleichung \eqref{eq:dubbi} mit Python/SciPy gefittet. 
+Messwerte und Curve-Fit sind in Abbildung \ref{fig:temp} abgebildet. 
+\begin{figure}[H]
+    \centering
+    \includegraphics{build/temp.pdf}
+    \caption{Messwerte und Regression für die temperaturabhängige Viskosität.}
+    \label{fig:temp}
+\end{figure}
+\noindent Die Parameter sind hierbei:
+\begin{align}
+    A &= \SI{4.97\pm0.45e-6}{\pascal\second} \\
+    B &= \SI{1.58\pm0.03e3}{\per\kelvin}
+\end{align}
+Somit ist die Temperaturabhängigkeit der Viskosität bestimmt.
+%
 \subsection{Berechnung der Reynoldschen Zahl}
+Die Reynolds-Zahl wird mithilfe von Gleichung \eqref{eq:dubbi} bestimmt.
+Hierbei sind die Dichte 
+\mbox{$\rho = \SI[per-mode=reciprocal]{998}{\kg\per\meter\cubed}$},
+die Strömungsgeschwindigkeit, hier die Fallgeschwindigkeit der Kugel,
+\mbox{$v = \SI[per-mode=reciprocal]{998}{\meter\per\second}$},
+der Durchmesser der Kugel
+\mbox{$d = \SI[per-mode=reciprocal]{15.76e-3}{\meter}$} 
+und die zuvor berechnete ViskoSI[per-mode=reciprocal]tät bei Raumtemperatur
+\mbox{$\eta = \SI[per-mode=reciprocal]{1.167\pm9.138}{\newton\second\per\meter\squared}$}.
+Es ergibt sich aus den genannten Werten eine Reynolds-Zahl von
+\begin{equation}
+    \mathit{R\kern-.04em e} = \num{999\pm999}.
+\end{equation}
