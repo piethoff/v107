@@ -16,13 +16,13 @@ Neben der Reibungskraft wirken auf die Kugel die Schwerkraft $F_g$ und der Auftr
 Auftrieb und Schwerkraft sind entgegengerichtet.
 \subsection{Aufbau}
 Um die Viskosität zu betimmen wird hier das Kugelfall-Viskosimeter nach Höppler verwendet.
-Die Abbildung zeigt dieses.
-%\begin{figure}
-%  \centering
-%  \includegraphics{}
-%  \caption{Kugelfall-Viskosimeter nach Höppler}
-%  \label{fig:aufbau}
-%\end{figure}
+Die Abbildung\ref{fig:aufbau} zeigt dieses.
+\begin{figure}[H]
+  \centering
+  \includegraphics{content/Aufbau.png}
+  \caption{Kugelfall-Viskosimeter nach Höppler\cite{v107}}
+  \label{fig:aufbau}
+\end{figure}
 Bei diesem wird eine Kugel in einem Rohr fallengelassen, welches einen geringfügig größeren Durchmesser als die Kugel aufweist.
 Das Rohr ist dabei mit einer viskosen Flüssigkeit gefüllt.
 Um zu vermeiden, dass die Kugel unkontrolliert gegen die Rohrwand stößt ist das Fallrohr leicht geneigt, sodass die Kugel die Rohrwand hinabgleitet.
@@ -40,3 +40,14 @@ Andradesches Gleichung beschreibt die Viskosität bei variabler Temperatur:
 A und B sind dabei Konstanten.
 Die Temperatur der viskosen Flüssigkeit lässt sich über ein Wasserbad regulieren, welches durch eine Pumpe realiesirt wird.
 Nachdem die Kugel am Ende des Fallrohrs angekommen ist kann das Viskosimeter um $180$ Grad rotiert werden.
+\subsection{Die Reynoldsche Zahl}
+Die Reynoldsche Zahl ist eine dimensionslose Kenngröße.
+Sie findet Verwendung bei der Untersuchung ob eine Strömung turbulent oder laminar ist.
+Überschreitet diese einen kirtischen Wert, so ist die Strömung turbulent.
+Für Wasser liegt dieser Wert bei $R_e=2300$.
+Die Reynoldsche Zahl ist durch
+\begin{equation}
+  R_e = \frac{\rho \nu d}{\upeta}
+\end{equation}
+definiert.
+Hierbei ist \rho die Dichte der Flüssigkeit, \nu die Strömungsgeschwindigkeit der Flüßigkeit gegenüber des Körpers und $d$ die Länge des Körpers.
