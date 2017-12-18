@@ -21,15 +21,16 @@ pkerr = 0.49
 pf = 988
 
 n = np.zeros(int(data[0].size)*2)
-nerr = np.zeros(int(data[0].size)*2)
+#nerr = np.zeros(int(data[0].size)*2)
 T = np.zeros(int(data[0].size)*2)
 T = np.append(data[2], data[2])
 n = np.append(data[0], data[1])
 
-n *= K*(pk-pf)
 nerr = n*np.sqrt((Kerr*(pk-pf))**2 + (pkerr*K)**2)
+n *= K*(pk-pf)
 T += 273.15
-
+print(n)
+print(nerr)
 def f(T, A, B):
     return A*np.exp(B/T)
 
@@ -42,8 +43,8 @@ print(uparams)
 #print(1/T)
 #print(n)
 
-plt.plot(1/T, n,"." ,label="Messwerte")
-plt.plot(1/T, f(T, *params), label="Regression")
+plt.errorbar(1/T, n, yerr = nerr, elinewidth=0.7, capthick=0.7, capsize=3, fmt=".", color="xkcd:blue", label="Messwerte")
+plt.plot(1/T, f(T, *params), color="xkcd:orange", label="Regression")
 plt.yscale("log")
 plt.ylabel(r"$\eta/\si{\pascal\second}$")
 plt.xlabel(r"$T^-1/\si{\per\second}$")
