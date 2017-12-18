@@ -1,7 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Bestimmung der Viskosität von destilliertem Wasser bei konstanter Temperatur}
-Die Dichte der Kugel erhält man aus den gemessenen Werten für die Masse und den Durchmesser, welche in Tabelle aufgetragen sind.
+Die Dichte der Kugel erhält man aus den gemessenen Werten für die Masse und den Durchmesser, welche in Tabelle\ref{tab:kl_maße} aufgetragen sind.
 \begin{table}[H]
   \caption{Ergebnisse der Messung.}
   \label{tab:kl_maße}
@@ -61,11 +61,11 @@ Daraus ergibt sich im Mittel folgende Fallzeit:
 \end{equation*}
 Die Ungenauigkeit errechnet sich hier über die Streuung des Mittelwertes nach Gleichung\eqref{eq:streu}.
 Die Apparaturkonstante ist in der Anleitung für die Kleine Kugel mit $K_\text{kl}=\SI{0.0764e-6}{\pascal\cubic\meter\per\kilo\gram}$\cite{v107} angegeben.
-Die Dichte des Wassers wird als eine Konstante mit $\rho_\text{Fl} = 988\si{\kilo\gram\per\cubic\meter}$.
+Die Dichte des Wassers wird als eine Konstante mit $\rho_\text{Fl} = 988\si{\kilo\gram\per\cubic\meter}$\cite{dWasser}.
 Damit folgt für die Viskosität von destilliertem Wasser folgender Wert:
 \begin{equation*}
   \label{eq:vis}
-  \upeta = \SI{1.167\pm9.138e-3}{\newton\second\per\meter\squared}
+  \upeta = \SI{1.167\pm0.113e-3}{\newton\second\per\meter\squared}
 \end{equation*}
 Die Ungenauigkeit errechnet sich hier mit der Gaußschen Fehlerfortpflanzung nach:
 \begin{equation*}
@@ -135,11 +135,11 @@ Die gemessenen Werte für die Fallzeit befinden sich in Tabelle\ref{tab:fall_g}
  bestimmen.
  Damit ergibt sich eine Apparaturkonstante von:
  \begin{equation*}
-   K=\SI{1.1738e-8}{\pascal\cubic\meter\per\kilo\gram}
+   K=\SI{1.1738\pm 0.1338 e-8}{\pascal\cubic\meter\per\kilo\gram}
  \end{equation*}
  Die Ungenauigkeit errechnet sich über die Gaußsche Fehlerfortpflanzung nach:
  \begin{equation*}
-   \Delta K = \sqrt{(\Delta t \frac{- \upeta}{(\rho_K - \rho_\text{Fl})t^2})^2 +(\Delta \upeta \frac{1}{(\rho_K - \rho_\text{Fl})t})^2 + (\Delta \rho_K \frac{-\upeta}{({\rho_K}^2 - \rho_\text{Fl})}t)^2}
+   \Delta K = \sqrt{(\Delta t \frac{- \upeta}{(\rho_K - \rho_\text{Fl})t^2})^2 +(\Delta \upeta \frac{1}{(\rho_K - \rho_\text{Fl})t})^2 + (\Delta \rho_K \frac{-\upeta}{({\rho_K}^2 - \rho_\text{Fl})t})^2}
  \end{equation*}
 %
 \subsection{Temperaturabhängigkeit der Viskosität}
@@ -174,8 +174,8 @@ Es wurden folgende Messwerte aufgenommen:
     \bottomrule
     \end{tabular}
 \end{table}
-\noindent Diese werden nun nach Gleichung \eqref{eq:dubbi} mit Python/SciPy gefittet. 
-Messwerte und Curve-Fit sind in Abbildung \ref{fig:temp} abgebildet. 
+\noindent Diese werden nun nach Gleichung \eqref{eq:dubbi} mit Python/SciPy gefittet.
+Messwerte und Curve-Fit sind in Abbildung \ref{fig:temp} abgebildet.
 \begin{figure}[H]
     \centering
     \includegraphics{build/temp.pdf}
@@ -191,12 +191,12 @@ Somit ist die Temperaturabhängigkeit der Viskosität bestimmt.
 %
 \subsection{Berechnung der Reynoldschen Zahl}
 Die Reynolds-Zahl wird mithilfe von Gleichung \eqref{eq:dubbi} bestimmt.
-Hierbei sind die Dichte 
+Hierbei sind die Dichte
 \mbox{$\rho = \SI[per-mode=reciprocal]{998}{\kg\per\meter\cubed}$},
 die Strömungsgeschwindigkeit, hier die Fallgeschwindigkeit der Kugel,
 \mbox{$v = \SI[per-mode=reciprocal]{998}{\meter\per\second}$},
 der Durchmesser der Kugel
-\mbox{$d = \SI[per-mode=reciprocal]{15.76e-3}{\meter}$} 
+\mbox{$d = \SI[per-mode=reciprocal]{15.76e-3}{\meter}$}
 und die zuvor berechnete ViskoSI[per-mode=reciprocal]tät bei Raumtemperatur
 \mbox{$\eta = \SI[per-mode=reciprocal]{1.167\pm9.138}{\newton\second\per\meter\squared}$}.
 Es ergibt sich aus den genannten Werten eine Reynolds-Zahl von
