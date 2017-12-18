@@ -190,16 +190,36 @@ Messwerte und Curve-Fit sind in Abbildung \ref{fig:temp} abgebildet.
 Somit ist die Temperaturabhängigkeit der Viskosität bestimmt.
 %
 \subsection{Berechnung der Reynoldschen Zahl}
-Die Reynolds-Zahl wird mithilfe von Gleichung \eqref{eq:and} bestimmt.
-Hierbei sind die Dichte
-\mbox{$\rho = \SI[per-mode=reciprocal]{998}{\kg\per\meter\cubed}$},
-die Strömungsgeschwindigkeit, hier die Fallgeschwindigkeit der Kugel,
-\mbox{$v = \SI[per-mode=reciprocal]{998}{\meter\per\second}$},
-der Durchmesser der Kugel
-\mbox{$d = \SI[per-mode=reciprocal]{15.76e-3}{\meter}$}
-und die zuvor berechnete Viskosität bei Raumtemperatur
-\mbox{$\eta = \SI[per-mode=reciprocal]{1.167\pm9.138}{\newton\second\per\meter\squared}$}.
-Es ergibt sich aus den genannten Werten eine Reynolds-Zahl von
+Die Reynolds-Zahl wird mithilfe von Gleichung \eqref{eq:dubbi} für Raumtemperatur bestimmt.
+Hierbei ist die Dichte des Wassers
+\mbox{$\rho_\text{Fl} = \SI[per-mode=reciprocal]{998}{\kg\per\meter\cubed}$},
+die zuvor berechnete Viskosität bei Raumtemperatur
+\mbox{$\eta = \SI[per-mode=reciprocal]{1.167\pm0.113}{\newton\second\per\meter\squared}$} und 
+$v=x/t$ und $x=\SI{100}{\milli\meter}$ 
+Für die große Kugel ergibt sich mit der Falldauer
+\mbox{$t = \SI[per-mode=reciprocal]{69.76\pm0.12}{\second}$} und 
+dem Durchmesser der Kugel
+\mbox{$d = \SI[per-mode=reciprocal]{15.76e-3}{\meter}
+eine Reynolds-Zahl von
 \begin{equation}
-    \mathit{R\kern-.04em e} = \num{999\pm999}.
+    \mathit{R\kern-.04em e} = \num{19.13\pm1.85}.
+\end{equation}
+%
+Für die kleine Kugel ergibt sich mit 
+der Falldauer
+\mbox{$t = \SI[per-mode=reciprocal]{12.17\pm0.22}{\second}$},
+dem Durchmesser der Kugel
+\mbox{$d = \SI[per-mode=reciprocal]{15.59\pm0.14}{\meter}$}
+eine Reynolds-Zahl von
+\begin{equation}
+    \mathit{R\kern-.04em e} = \num{108.41\pm10.72}.
+\end{equation}
+%
+Die Fehler berechnet sich nach:
+\begin{equation}
+    \symup{\Delta}\mathit{R\kern-.04em e} = \sqrt{
+        \left(\rho_\text{Fl} \frac{xD}{\eta t^2}\symup{\Delta}t \right)^2 +
+        \left(\rho_\text{Fl} \frac{x}{\eta t}\symup{\Delta}D \right)^2 +
+        \left(\rho_\text{Fl} \frac{xD}{\eta^2 t}\symup{\Delta}\eta \right)^2
+    } 
 \end{equation}
