@@ -27,7 +27,7 @@ T = np.append(data[2], data[2])
 n = np.append(data[0], data[1])
 
 n *= K*(pk-pf)
-nerr = n*np.sqrt((Kerr*(pk-pf)**2 + (pkerr*K)**2)
+nerr = n*np.sqrt((Kerr*(pk-pf))**2 + (pkerr*K)**2)
 T += 273.15
 
 def f(T, A, B):
@@ -42,7 +42,7 @@ print(uparams)
 #print(1/T)
 #print(n)
 
-plt.plot(1/T, n, yerr=nerr, ".", label="Messwerte")
+plt.plot(1/T, n,"." ,label="Messwerte")
 plt.plot(1/T, f(T, *params), label="Regression")
 plt.yscale("log")
 plt.ylabel(r"$\eta/\si{\pascal\second}$")
