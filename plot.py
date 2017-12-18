@@ -13,7 +13,7 @@ data = np.genfromtxt("content/var_temp.txt", unpack=True)
 
 #Apperaturkonstante
 K = 1.1738*10**(-8)
-Kerr = 
+Kerr = 0.1338*10**(-8)
 #Dichte der Kugel
 pk = 2413.16
 pkerr = 0.49
