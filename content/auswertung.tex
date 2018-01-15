@@ -1,9 +1,9 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Bestimmung der Viskosität von destilliertem Wasser bei konstanter Temperatur}
-Die Dichte der Kugel erhält man aus den gemessenen Werten für die Masse und den Durchmesser, welche in Tabelle\ref{tab:kl_maße} aufgetragen sind.
+Die Dichte der kleinen Kugel erhält man aus den gemessenen Werten für die Masse und den Durchmesser, welche in Tabelle \ref{tab:kl_maße} aufgetragen sind.
 \begin{table}[H]
-  \caption{Ergebnisse der Messung.}
+  \caption{Gemessene Werte für die Größe und das Gewicht der kleinen Kugel.}
   \label{tab:kl_maße}
   \centering
   \sisetup{table-format=2.2}
@@ -20,7 +20,7 @@ Die Dichte der Kugel erhält man aus den gemessenen Werten für die Masse und de
   \bar{m}=\SI{4.45\pm 0.01}{\gram}
 \end{equation*}
 \begin{equation*}
-  \bar{D}=\SI{15.59\pm 0.14 }{\milli\meter}
+  \bar{D}=\SI{15.59\pm 0.004 }{\milli\meter}
 \end{equation*}
 \noindent Die Ungenauigkeit errechnet sich hier über Streung des Mittelwertes:
  \begin{equation}
@@ -37,7 +37,7 @@ Die Dichte der Kugel erhält man aus den gemessenen Werten für die Masse und de
    \rho_K =\frac{\bar{m}} {V}=\SI{2242.94\pm121.07}{\kilo\gram\per\cubic\meter}
  \end{equation}
 Die Unsicherheit errechnet sich hier über die Gaußsche Fehlerfortpflanzung.
-Die gemessenen Werte für die Fallzeit der Kugel sind in Tabelle\ref{tab:kl_fall} eingetragen.
+Die gemessenen Werte für die Fallzeit der Kugel sind in Tabelle \ref{tab:kl_fall} eingetragen.
 \begin{table}[H]
     \centering
     \caption{Fallzeiten der kleinen Kugel.}
@@ -59,8 +59,10 @@ Daraus ergibt sich im Mittel folgende Fallzeit:
   \label{eq:fallzeit}
   \bar{t}=\SI{12.175\pm0.022}{\second}
 \end{equation*}
-Die Ungenauigkeit errechnet sich hier über die Streuung des Mittelwertes nach Gleichung\eqref{eq:streu}.
-Die Apparaturkonstante ist in der Anleitung für die Kleine Kugel mit \mbox{$K_\text{kl}=\SI{0.0764e-6}{\pascal\cubic\meter\per\kilo\gram}$}\cite{v107} angegeben.
+Die Ungenauigkeit errechnet sich hier über die Streuung des Mittelwertes nach Gleichung \eqref{eq:streu}.
+Die Apparaturkonstante ist in der Anleitung für die Kleine Kugel mit
+\mbox{$K_\text{kl}=\SI{0.0764e-6}{\pascal\cubic\meter\per\kilo\gram}$}\cite{v107}
+angegeben.
 Die Dichte des Wassers wird als eine Konstante mit $\rho_\text{Fl} = 988\si{\kilo\gram\per\cubic\meter}$\cite{dWasser}.
 Damit folgt für die Viskosität von destilliertem Wasser folgender Wert:
 \begin{equation*}
@@ -72,9 +74,9 @@ Die Ungenauigkeit errechnet sich hier mit der Gaußschen Fehlerfortpflanzung nac
   \Delta\upeta = \sqrt{(\Delta t K(\rho_K - \rho_\text{Fl})^2 +(\Delta\rho_K \cdot -K \rho_\text{Fl})^2}
 \end{equation*}
 \subsection{Bestimmung der Apparaturkonstante für die große Kugel}
-Die Dichte der Kugel erhält man aus den gemessenen Werten für die Masse und den Durchmesser, welche in Tabelle\ref{tab:g_maße} aufgetragen sind.
+Die Dichte der großen Kugel erhält man aus den gemessenen Werten für die Masse und den Durchmesser, welche in Tabelle \ref{tab:g_maße} aufgetragen sind.
 \begin{table}[H]
-  \caption{Ergebnisse der Messung.}
+  \caption{Gemessene Werte für die Größe und das Gewicht der großen Kugel.}
   \label{tab:g_maße}
   \centering
   \sisetup{table-format=2.2}
@@ -88,7 +90,7 @@ Die Dichte der Kugel erhält man aus den gemessenen Werten für die Masse und de
 \end{table}
 \noindent Im Mittel erhält man dann für den Durchmesser und die Masse:
 \begin{equation*}
-  \bar{m}=\SI{4.946\pm0.001}{\gram}
+  \bar{m}=\SI{4.947\pm0.003}{\gram}
 \end{equation*}
 \begin{equation*}
   \bar{D}=\SI{15.76}{\milli\meter}
@@ -100,13 +102,13 @@ Die Kugel hat ein Volumen von
 \end{equation*}
 und damit eine Dichte von
 \begin{equation*}
-  \rho_K = \SI{2413.16\pm0.49}{\kilo\gram\per\cubic\meter}.
+  \rho_K = \SI{2413.49\pm5.80}{\kilo\gram\per\cubic\meter}.
 \end{equation*}
 Die Ungenauigkeit errechnet sich über die Gaußsche Fehlerfortpflanzung:
 \begin{equation*}
-  \Delta \rho_K = \sqrt{{\Delta m \frac{1}{V}}^2}
+  \Delta \rho_K = \Delta m \frac{1}{V}
 \end{equation*}
-Die gemessenen Werte für die Fallzeit befinden sich in Tabelle\ref{tab:fall_g}
+Die gemessenen Werte für die Fallzeit befinden sich in Tabelle \ref{tab:fall_g}
 \begin{table}[H]
     \centering
     \caption{Fallzeiten der kleinen Kugel.}
@@ -135,7 +137,7 @@ Die gemessenen Werte für die Fallzeit befinden sich in Tabelle\ref{tab:fall_g}
  bestimmen.
  Damit ergibt sich eine Apparaturkonstante von:
  \begin{equation*}
-   K=\SI{1.1738\pm 0.1338 e-8}{\pascal\cubic\meter\per\kilo\gram}
+   K=\SI{1.1735\pm 0.1366 e-8}{\pascal\cubic\meter\per\kilo\gram}
  \end{equation*}
  Die Ungenauigkeit errechnet sich über die Gaußsche Fehlerfortpflanzung nach:
  \begin{equation*}
@@ -207,7 +209,7 @@ eine Reynolds-Zahl von
 %
 Für die kleine Kugel ergibt sich mit
 der Falldauer
-\mbox{$t = \SI[per-mode=reciprocal]{12.17\pm0.22}{\second}$} und 
+\mbox{$t = \SI[per-mode=reciprocal]{12.17\pm0.22}{\second}$} und
 dem Durchmesser der Kugel
 \mbox{$d = \SI[per-mode=reciprocal]{15.59\pm0.14}{\meter}$}
 eine Reynolds-Zahl von
