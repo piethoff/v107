@@ -20,21 +20,24 @@ pkerr = 0.49
 #Dichte der Flüssigkeit
 pf = 988
 
-n = np.zeros(int(data[0].size)*2)
-#nerr = np.zeros(int(data[0].size)*2)
-T = np.zeros(int(data[0].size)*2)
-T = np.append(data[2], data[2])
-n = np.append(data[0], data[1])
-
 nerr = n*np.sqrt((Kerr*(pk-pf))**2 + (pkerr*K)**2)
-n *= K*(pk-pf)
-T += 273.15
+#data[1] = n*np.sqrt((Kerr*(pk-pf))**2 + (pkerr*K)**2 + (data[1])**2)
+data[2] *= K*(pk-pf)
+data[0] += 273.15
+data[1] += 273.15
+
+for i in range(data[0].size())
+    T1 = data[0][i]
+    T2 = data[1][i]
+    data[0][i] = (T1+T2)/2
+    data[1][i] = (T1-T2)/2
+
 print(n)
 print(nerr)
 def f(T, A, B):
     return A*np.exp(B/T)
 
-params, covar = curve_fit(f, T, n, absolute_sigma=True, sigma=nerr, p0=(0, 1.14))
+params, covar = curve_fit(f, data[2], data[0], absolute_sigma=True, sigma=data[1], p0=(0, 1.14))
 uparams = unumpy.uarray(params, np.sqrt(np.diag(covar)))
 print("Parameter A und B: ")
 print(uparams)
