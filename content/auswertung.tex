@@ -29,12 +29,12 @@ Die Dichte der kleinen Kugel erhält man aus den gemessenen Werten für die Mass
  \end{equation}
  Die Kugel hat ein Volumen von:
  \begin{equation}
-   V = \frac{4}{3} \pi r^3 = \SI{1.984\pm0.107e-6}{\cubic\meter}
+   V = \frac{4}{3} \pi r^3 = \SI{1.984\pm0.002e-6}{\cubic\meter}
  \end{equation}
  Die Ungenauigkeit des Volumens berechnet sich über die Gaußsche Fehlerfortpflanzung.
  Damit ergibt sich für die Kugel eine Dichte von:
  \begin{equation}
-   \rho_K =\frac{\bar{m}} {V}=\SI{2242.94\pm121.07}{\kilo\gram\per\cubic\meter}
+   \rho_K =\frac{\bar{m}} {V}=\SI{2242.94\pm5.33}{\kilo\gram\per\cubic\meter}
  \end{equation}
 Die Unsicherheit errechnet sich hier über die Gaußsche Fehlerfortpflanzung.
 Die gemessenen Werte für die Fallzeit der Kugel sind in Tabelle \ref{tab:kl_fall} eingetragen.
@@ -54,6 +54,7 @@ Die gemessenen Werte für die Fallzeit der Kugel sind in Tabelle \ref{tab:kl_fal
         \bottomrule
     \end{tabular}
 \end{table}
+\noindent 
 Daraus ergibt sich im Mittel folgende Fallzeit:
 \begin{equation*}
   \label{eq:fallzeit}
@@ -67,11 +68,11 @@ Die Dichte des Wassers wird als eine Konstante mit $\rho_\text{Fl} = 988\si{\kil
 Damit folgt für die Viskosität von destilliertem Wasser folgender Wert:
 \begin{equation*}
   \label{eq:vis}
-  \upeta = \SI{1.167\pm0.113e-3}{\newton\second\per\meter\squared}
+  \upeta = \SI{1.167\pm0.005e-3}{\newton\second\per\meter\squared}
 \end{equation*}
 Die Ungenauigkeit errechnet sich hier mit der Gaußschen Fehlerfortpflanzung nach:
 \begin{equation*}
-  \Delta\upeta = \sqrt{(\Delta t K(\rho_K - \rho_\text{Fl})^2 +(\Delta\rho_K \cdot -K \rho_\text{Fl})^2}
+  \Delta\upeta = \sqrt{(\Delta t K(\rho_K - \rho_\text{Fl})^2 +(Kt\symup{\Delta}\rho_K)^2}
 \end{equation*}
 \subsection{Bestimmung der Apparaturkonstante für die große Kugel}
 Die Dichte der großen Kugel erhält man aus den gemessenen Werten für die Masse und den Durchmesser, welche in Tabelle \ref{tab:g_maße} aufgetragen sind.
@@ -95,23 +96,23 @@ Die Dichte der großen Kugel erhält man aus den gemessenen Werten für die Mass
 \begin{equation*}
   \bar{D}=\SI{15.76}{\milli\meter}
 \end{equation*}
-\noindent Die Ungenauigkeit errechnet sich hier über Streung des Mittelwertes nach Gleichung\eqref{eq:streu}.
+\noindent Die Ungenauigkeit errechnet sich hier über Streuung des Mittelwertes nach Gleichung\eqref{eq:streu}.
 Die Kugel hat ein Volumen von
 \begin{equation*}
   V =\SI{2.049e-6}{\cubic\meter}
 \end{equation*}
 und damit eine Dichte von
 \begin{equation*}
-  \rho_K = \SI{2413.49\pm5.80}{\kilo\gram\per\cubic\meter}.
+  \rho_K = \SI{2413.49\pm1.46}{\kilo\gram\per\cubic\meter}.
 \end{equation*}
 Die Ungenauigkeit errechnet sich über die Gaußsche Fehlerfortpflanzung:
 \begin{equation*}
   \Delta \rho_K = \Delta m \frac{1}{V}
 \end{equation*}
-Die gemessenen Werte für die Fallzeit befinden sich in Tabelle \ref{tab:fall_g}
+Die gemessenen Werte für die Fallzeit befinden sich in Tabelle \ref{tab:fall_g}.
 \begin{table}[H]
     \centering
-    \caption{Fallzeiten der kleinen Kugel.}
+    \caption{Fallzeiten der großen Kugel.}
     \label{tab:fall_g}
     \begin{tabular}{S[table-format=2.2] S[table-format=2.2] }
         \toprule
@@ -125,59 +126,63 @@ Die gemessenen Werte für die Fallzeit befinden sich in Tabelle \ref{tab:fall_g}
         \bottomrule
     \end{tabular}
 \end{table}
+\noindent
  Im Mittel errechnet sich daraus ein Wert von
  \begin{equation*}
    \bar{t} = \SI{69.76\pm0.12}{\second}
  \end{equation*}
- Die Ungenauigkeit errechnet sich analog zu der Fallzeit der kleinen Kugel\eqref{eq:fallzeit}.
- Mit der vorher errechneten Vsikosität $\upeta=\SI{1.167e-3}{\newton\second\per\meter\squared}$, lässt sich die Apparaturkonstante für die große Kugel über
+ Die Ungenauigkeit errechnet sich analog zu der Fallzeit der kleinen Kugel \ref{eq:fallzeit}.
+ Mit der vorher errechneten Viskosität $\upeta=\SI{1.167e-3}{\newton\second\per\meter\squared}$, lässt sich die Apparaturkonstante für die große Kugel über
  \begin{equation*}
    K =\frac{\upeta}{(\rho_K - \rho_\text{Fl})\cdot \bar{t}}
  \end{equation*}
  bestimmen.
  Damit ergibt sich eine Apparaturkonstante von:
  \begin{equation*}
-   K=\SI{1.1735\pm 0.1366 e-8}{\pascal\cubic\meter\per\kilo\gram}
+   K=\SI{1.1735\pm 0.0056e-8}{\pascal\cubic\meter\per\kilo\gram}
  \end{equation*}
  Die Ungenauigkeit errechnet sich über die Gaußsche Fehlerfortpflanzung nach:
  \begin{equation*}
-   \Delta K = \sqrt{(\Delta t \frac{- \upeta}{(\rho_K - \rho_\text{Fl})t^2})^2 +(\Delta \upeta \frac{1}{(\rho_K - \rho_\text{Fl})t})^2 + (\Delta \rho_K \frac{-\upeta}{({\rho_K}^2 - \rho_\text{Fl})t})^2}
+   \Delta K = \sqrt{(\Delta t \frac{- \upeta}{(\rho_K - \rho_\text{Fl})t^2})^2 +(\Delta \upeta \frac{1}{(\rho_K - \rho_\text{Fl})t})^2 + (\Delta \rho_K \frac{-\upeta}{({\rho_K} - \rho_\text{Fl})^2t})^2}
  \end{equation*}
 %
 \subsection{Temperaturabhängigkeit der Viskosität}
 Es wurden folgende Messwerte aufgenommen:
 \begin{table}[H]
     \centering
-    \caption{Messwerte zur Bestimmung der Temperaturabhängigen Viskosität.}
-    \begin{tabular}{S[table-format=2.0] S[table-format=2.2]}
+    \caption{Messwerte zur Bestimmung der temperaturabhängigen Viskosität.}
+    \begin{tabular}{S[table-format=3.2] S[table-format=2.2(3)] S[table-format=1.3(4)] S[table-format=1.2]}
     \toprule
-    {Temperatur$/\si{\celsius}$} & {Fallzeit$/\si{\second}$} \\
+    {Temperatur$/\si{\celsius}$} & {Fallzeit$/\si{\second}$} & {$\eta /\si{\milli\pascal\second}$} & {$\frac{1}{T} /\SI[per-mode=reciprocal]{e-3}{\per\kelvin}$}\\
     \midrule
-    32 &    53.41 \\
-    32 &    52.92 \\
-    34 &    51.31 \\
-    34 &    51.04 \\
-    38 &    47.72 \\
-    38 &    45.95 \\
-    45 &    42.62 \\
-    45 &    42.84 \\
-    48 &    40.31 \\
-    48 &    40.23 \\
-    52 &    38.22 \\
-    52 &    37.91 \\
-    55 &    36.50 \\
-    55 &    37.18 \\
-    60 &    34.28 \\
-    60 &    33.87 \\
-    64 &    32.62 \\
-    64 &    31.30 \\
-    70 &    30.38 \\
-    70 &    30.20 \\
+    305.15  & 53.17\pm0.25  & 0.889\pm0.006     & 3.28\\
+    307.15  & 51.18\pm0.14  & 0.856\pm0.005     & 3.26\\
+    311.15  & 46.84\pm0.89  & 0.783\pm0.002     & 3.21\\
+    318.15  & 42.73\pm0.11  & 0.715\pm0.004     & 3.14\\
+    321.15  & 40.27\pm0.04  & 0.674\pm0.003     & 3.11\\
+    325.15  & 38.07\pm0.16  & 0.637\pm0.004     & 3.08\\
+    328.15  & 36.84\pm0.34  & 0.616\pm0.006     & 3.05\\
+    333.15  & 34.08\pm0.21  & 0.570\pm0.004     & 3.00\\
+    337.15  & 31.96\pm0.66  & 0.534\pm0.011     & 2.97\\
+    343.15  & 30.29\pm0.09  & 0.507\pm0.002     & 2.91\\
     \bottomrule
     \end{tabular}
 \end{table}
-\noindent Diese werden nun nach Gleichung \eqref{eq:and} mit Python/SciPy gefittet.
+\noindent 
+Es wurden zusätzlich die errechneten Werte für $\eta$ mit
+\begin{align}
+    \eta &= K(\rho_K-\rho_{Fl})t \\
+    \symup{\Delta}\eta &= \sqrt{\left(Kt\symup{\Delta}\rho_K\right)^2+\left(K(\rho_K-\rho_{Fl})\symup{\Delta}t\right)^2}
+\end{align}
+und $1/T$ aufgetragen.
+Die Werte werden nun nach Gleichung \eqref{eq:and} mit Python/SciPy gefittet.
 Messwerte und Curve-Fit sind in Abbildung \ref{fig:temp} abgebildet.
+Es wurde die Funktion
+\begin{equation}
+    \eta (T) = A \exp{\frac{B}{T}}
+\end{equation}
+für die Regression verwendet.
+Die Fehlerbalken resultieren aus den fehlerbehafteten Werten für $\eta$.
 \begin{figure}[H]
     \centering
     \includegraphics{build/temp.pdf}
@@ -186,35 +191,35 @@ Messwerte und Curve-Fit sind in Abbildung \ref{fig:temp} abgebildet.
 \end{figure}
 \noindent Die Parameter sind hierbei:
 \begin{align}
-    A &= \SI{5.24\pm3.57e-6}{\pascal\second} \\
-    B &= \SI{1.56\pm0.22e3}{\kelvin}
+    A &= \SI{5.32\pm0.31e-6}{\pascal\second} \\
+    B &= \SI{1.56\pm0.02e3}{\kelvin}
 \end{align}
 Somit ist die Temperaturabhängigkeit der Viskosität bestimmt.
 %
 \subsection{Berechnung der Reynoldschen Zahl}
-Die Reynolds-Zahl wird mithilfe von Gleichung \eqref{eq:and} für Raumtemperatur bestimmt.
+Die Reynolds-Zahl wird mithilfe von Gleichung \eqref{eqn:rey} für Raumtemperatur bestimmt.
 Hierbei ist die Dichte des Wassers
-\mbox{$\rho_\text{Fl} = \SI[per-mode=reciprocal]{998}{\kg\per\meter\cubed}$},
+\mbox{$\rho_\text{Fl} = \SI[per-mode=reciprocal]{988}{\kg\per\meter\cubed}$},
 die zuvor berechnete Viskosität bei Raumtemperatur
-\mbox{$\eta = \SI[per-mode=reciprocal]{1.167\pm0.113}{\newton\second\per\meter\squared}$} und
+\mbox{$\eta = \SI[per-mode=reciprocal]{1.167\pm0.005}{\newton\second\per\meter\squared}$} und
 $v=x/t$ mit $x=\SI{100}{\milli\meter}$.
 Für die große Kugel ergibt sich mit der Falldauer
 \mbox{$t = \SI[per-mode=reciprocal]{69.76\pm0.12}{\second}$} und
 dem Durchmesser der Kugel
-\mbox{$d = \SI[per-mode=reciprocal]{15.76e-3}{\meter}$}
+\mbox{$D = \SI[per-mode=reciprocal]{15.76}{\milli\meter}$}
 eine Reynolds-Zahl von
 \begin{equation}
-    \mathit{R\kern-.04em e} = \num{19.13\pm1.85}.
+    \mathit{R\kern-.04em e} = \num{19.13\pm0.09e-3}.
 \end{equation}
 %
 Für die kleine Kugel ergibt sich mit
 der Falldauer
-\mbox{$t = \SI[per-mode=reciprocal]{12.17\pm0.22}{\second}$} und
+\mbox{$t = \SI[per-mode=reciprocal]{12.175\pm0.022}{\second}$} und
 dem Durchmesser der Kugel
-\mbox{$d = \SI[per-mode=reciprocal]{15.59\pm0.14}{\meter}$}
+\mbox{$D = \SI[per-mode=reciprocal]{15.590\pm0.004}{\milli\meter}$}
 eine Reynolds-Zahl von
 \begin{equation}
-    \mathit{R\kern-.04em e} = \num{108.41\pm10.72}.
+    \mathit{R\kern-.04em e} = \num{108.41\pm0.03e-3}.
 \end{equation}
 %
 Die Fehler berechnet sich nach:
